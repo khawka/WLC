@@ -1,6 +1,10 @@
 # WLC
-The algorith of "A new local algorithm for overlapping community detection based on clustering coefficient and common neighbour similarity" is uploaded in file WLC code.
 
+
+The algorith of "A new local algorithm for overlapping community detection based on clustering coefficient and common neighbour similarity" is uploaded in file WLC code.
+use the packages
+import networkx as nx
+import time
 The function WLC  inputs are: path: the path of txt file containing edges of graph
     sep : the used separator in the file of edges
  Run this function using: WLC(path, sep)
