@@ -12,4 +12,4 @@ The Output: is the file results containing overlapping communities
  import WLC_code as WLC
  f='karate.txt'
  WLC.WLC(f,',')
- the required package in networkx 
+ the required package is networkx 
