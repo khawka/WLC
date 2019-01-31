@@ -1,0 +1,76 @@
+def modu1(G,N,res):
+    m=0
+    for  U in res:
+        n=len(U);
+        
+        S=G.subgraph(U)
+        
+        rr=[]
+        for kk in res:
+            if not kk==U:
+                rr.extend(kk)
+        
+        ov=list(set(U).intersection(set(rr)))
+        
+        sum1= 0
+        i=0
+        while i<len(U):
+            j=i+1
+            while j<len(U):
+                if U[i] in ov :
+                
+                    
+                    o=S.degree(U[i])
+        
+            
+                    o1=0
+                
+                    for ll in res:
+                        if U[i] in ll:
+                            S1=G.subgraph(ll)
+                            o1=o1+S1.degree(U[i])
+                    
+                    al1=o/o1
+                else :   
+                    al1=1
+                     
+                if  U[j] in ov  :
+                    
+                
+                    oo=S.degree(U[j])                  
+        
+            
+                    oo1=0
+                    for ll in res:
+                    
+                        if U[j]in ll:
+                            S1=G.subgraph(ll)
+                            oo1=oo1+S1.degree(U[j]) 
+                        
+                    al2=oo/oo1   
+                                
+                else :   
+                
+                    al2=1
+              
+                
+            
+        
+                #tt=2*cpt
+            
+               
+                if G.has_edge(U[j],U[i]) :
+                    x=((1-((G.degree(U[i])*G.degree(U[j]))/(2*N)))*al1*al2)
+                    sum1= sum1+2*x  
+                    
+                else :
+                    
+                    
+                    sum1= sum1+2*((0-((G.degree(U[i])*G.degree(U[j]))/(2*N)))*al1*al2)
+                j=j+1
+            i=i+1
+        m=m+sum1
+
+    m=m/(2*N)#compute the total modularity
+    
+    return(m)
