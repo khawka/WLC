@@ -14,3 +14,4 @@ The Output: is the file results that contain overlapping communities
  f='edges-file-name.txt'
  WLC.WLC(f,',')
  
+Citation: Asmi, K., Lotfi, D., & El marraki, M. (2019, March). A new local algorithm for overlapping community detection based on clustering coefficient and common neighbor similarity. In Proceedings of the ArabWIC 6th Annual International Conference Research Track (pp. 1-6).
